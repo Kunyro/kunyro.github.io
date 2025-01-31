@@ -28,7 +28,7 @@
             </div>
             <div class="tags-container flex flex-wrap justify-end">
                 {{ range .Params.tags }}
-                <span class="tag border border-primary-500 text-primary-500 rounded-full px-2 py-1 mr-2">
+                <span class="tag border border-primary-500 text-primary-500 rounded-full px-2 py-1 mr-2 text-sm">
                     #{{ . | emojify }}
                 </span>
                 {{ end }}
