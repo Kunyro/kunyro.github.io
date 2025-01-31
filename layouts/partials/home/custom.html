@@ -16,13 +16,23 @@
     {{ range where .Site.Pages "Section" "projects" }}
     {{ if ne .Title "Projects" }}
     <article class="max-w-full">
-        <header>
-            {{ if .Params.showBreadcrumbs | default (.Site.Params.article.showBreadcrumbs | default false) }}
-            {{ partial "breadcrumbs.html" . }}
-            {{ end }}
-            <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-            {{ .Title | emojify }}
-            </h1>
+        <header class="flex justify-between items-center">
+            <div>
+                {{ if .Params.showBreadcrumbs | default (.Site.Params.article.showBreadcrumbs | default false) }}
+                {{ partial "breadcrumbs.html" . }}
+                {{ end }}
+                <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral relative group" id="{{ .Title | anchorize }}">
+                {{ .Title | emojify }}
+                <span class="absolute transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-primary-300" style="text-decoration-line:none!important" href="#{{ .Title | anchorize }}" aria-label="Anchor">#</a></span>
+                </h1>
+            </div>
+            <div class="tags-container flex flex-wrap justify-end">
+                {{ range .Params.tags }}
+                <span class="tag border border-primary-500 text-primary-500 rounded-full px-2 py-1 mr-2">
+                    #{{ . | emojify }}
+                </span>
+                {{ end }}
+            </div>
         </header>
         <section class=" dark:text-neutral-400 italic">
             {{ .Date.Format "January 2, 2006" }}
