@@ -23,7 +23,7 @@
                 {{ end }}
                 <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral relative group" id="{{ .Title | anchorize }}">
                 {{ .Title | emojify }}
-                <span class="absolute transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-primary-300" style="text-decoration-line:none!important" href="#{{ .Title | anchorize }}" aria-label="Anchor">#</a></span>
+                <span class="absolute transition-opacity duration-2000 opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-primary-300" style="text-decoration-line:none!important" href="#{{ .Title | anchorize }}" aria-label="Anchor">#</a></span>
                 </h1>
             </div>
             <div class="tags-container flex flex-wrap justify-end">
