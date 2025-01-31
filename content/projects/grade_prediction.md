@@ -5,6 +5,6 @@ description: "Program that learns to predict student grades based on a dataset u
 summary: "predict student grades using deep learning"
 tags: ["deeplearning", "ai", "python", "keras"]
 ---
-Program that learns to predict student grades based on a dataset using Deep Learning with Keras neural network Sequential models. Implemented Grid Search, Callbacks and Checkpoints and got final results to <0.4 MAE and <0.5 MSE
+Program that learns to **predict student grades** based on a dataset using **Deep Learning** with **Keras** neural network **Sequential models**. Implemented Grid Search, Callbacks and Checkpoints and got final results to <0.4 MAE and <0.5 MSE
 
 https://github.com/luneria9/Student-Performance-Analysis
